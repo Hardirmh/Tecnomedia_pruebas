@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<!-- saved from url=(0022)https://www.rapdev.io/ -->
+
+<html lang="en-es" class="">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,  text/html, charset=UTF-8, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!--<meta property="og:url" content="https://www.rapdev.io/">-->
+    <!-- <link rel="canonical" href="https://www.rapdev.io/">-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#00a59b" />
+    <meta name="mobile-web-app-capable" content="no" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+
+    <title>TECNOMEDIA: DISEÑANDO SOLUCIONES</title>
+
+    <link rel="stylesheet" href="./css/Tecnotailwind.css" />
+    <link rel="stylesheet" href="./css/TecnomediaGlobal.css" />
+  </head>
+
+  <body
+    style="
+      max-height: 90%;
+
+      background-image: url('./img/fondo1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      margin: 0;
+    "
+  >
+    <nav
+      class="sticky top-0 z-40 transition-colors duration-300 bg-white fondo-con-aureola fadeIn0"
+      style="border-radius: 0px; width: 100%"
+    >
+      <!-- DIV DEL NAVEGADOR -->
+      <div
+        class="flex items-center justify-between p-2 mx-auto transition-all duration-300 max-w-screen-2xl lg:grid lg:grid-cols-12"
+      >
+        <a class="logo lg:col-span-3" aria-label="Páguina principal" href="#">
+          <img
+            src="./img/logos/logoTecnomedia.png"
+            alt="logoTecnomedia"
+            class="ml-3 zoom lg:img-responsive lg:max-w-full max-w-55"
+          />
+        </a>
+
+        <!-- BOTON DE HAMBURGUESA -->
+        <div class="lg:hidden">
+          <button
+            class="flex items-center justify-center w-12 h-12 rounded-full bg-black group lg:hidden zoom"
+            aria-label="open menu"
+            id="toggleMenuButton"
+          >
+            <span
+              class="flex flex-col w-5 h-3.5 justify-between hover:text-tecnoverde"
+            >
+              <span
+                class="w-full h-px bg-white transition-transform duration-300"
+              >
+              </span>
+              <span
+                class="w-3/5 h-px bg-white transition-all group-hover:w-full"
+              >
+              </span>
+              <span
+                class="w-3/5 h-px bg-white transition-all group-hover:w-full"
+              >
+              </span>
+              <span
+                class="w-full h-px bg-white transition-transform duration-300"
+              >
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Desplegable DE HAMBURGUESA -->
+        <div class="menuHamburguesa fondo-con-aureola fadeInR" id="menuH">
+          <button
+            class="mb-2 w-full text-left hover:text-tecnoverde"
+            id="buttonNosotrosHamburguesa"
+          >
+            Nosotros
+          </button>
+          <button
+            class="mb-2 w-full text-left hover:text-tecnoverde"
+            id="buttonContactoHamburguesa"
+          >
+            Contacto
+          </button>
+          <button
+            class="mb-2 w-full text-left hover:text-tecnoverde"
+            id="buttonOtrosHamburguesa"
+          >
+            Otros
+          </button>
+          <!-- Agrega más botones según sea necesario -->
+        </div>
+
+        <!-- menu desplegable -->
+        <div
+          class="hidden text-heading-5 mt auto font-gilroy-medium gap-x-10 lg:flex lg:col-span-7 ml-4 lg:ml-20 text-black-bold"
+          id="menuContainer"
+        >
+          <button
+            class="flex items-center text-left transition-colors duration-300 gap-x-2 hover:text-tecnoverde zoom"
+            aria-label="Abrir menú Nosotros"
+            id="buttonNosotros"
+            onmouseover="mostrarMenu(event)"
+          >
+            Nosotros
+          </button>
+          <div
+            class="hidden absolute mt-8 fondo-con-aureola shadow-lg"
+            id="menuNosotros"
+            style="background-color: rgba(0, 0, 0, 0.5); color: white"
+          >
+            <ul>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+            </ul>
+          </div>
+
+          <button
+            class="flex items-center text-left transition-colors duration-300 gap-x-2 hover:text-tecnoverde zoom"
+            aria-label="Abrir menú Servicios"
+            id="buttonServicios"
+          >
+            Servicios
+          </button>
+
+          <div
+            class="hidden absolute mt-8 fondo-con-aureola shadow-lg"
+            id="menuServicios"
+            style="
+              left: 500px;
+              background-color: rgba(0, 0, 0, 0.5);
+              color: white;
+            "
+          >
+            <ul>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+            </ul>
+          </div>
+
+          <button
+            class="flex items-center text-left transition-colors duration-300 gap-x-2 hover:text-tecnoverde zoom"
+            aria-label="Abrir menú Aliados"
+            id="buttonAliados"
+          >
+            Aliados
+          </button>
+          <div
+            class="hidden absolute mt-8 fondo-con-aureola shadow-lg"
+            id="menuAliados"
+            style="
+              left: 650px;
+              background-color: rgba(0, 0, 0, 0.5);
+              color: white;
+            "
+          >
+            <ul>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+            </ul>
+          </div>
+
+          <button
+            class="flex items-center text-left transition-colors duration-300 gap-x-2 hover:text-tecnoverde zoom"
+            aria-label="Abrir menú Otros"
+            id="buttonOtros"
+          >
+            Otros
+          </button>
+
+          <div
+            class="hidden absolute mt-8 fondo-con-aureola shadow-lg"
+            id="menuOtros"
+            style="
+              left: 750px;
+              background-color: rgba(0, 0, 0, 0.5);
+              color: white;
+            "
+          >
+            <ul>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+              <li class="fondo-nublado"><a href="#">Opción nosotros</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- BOTON CONTACTANOS -->
+        <div
+          class="justify-end hidden lg:flex lg:col-span-2 lg:col-start-11 zoom"
+        >
+          <a
+            class="relative inline-block rounded-card [contain:paint] font-gilroy-medium group transition-colors duration-300 overflow-hidden text-center bg-black text-white-bold border border-blue hover:text-black py-3 px-7 text-btn-rounded-sm min-w-min"
+            href="./Contacto Tecnomedia.html"
+          >
+            <span class="relative z-10 text-xl"> Contáctanos</span>
+            <span
+              class="absolute bottom-0 left-0 right-0 w-40 h-40 mx-auto transition-opacity scale-0 translate-y-1/2 rounded-full lg:group-hover:scale-[650%] duration-500 bg-tecnoverde"
+            >
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <iframe
+      src="./portada.html"
+      width="100%"
+      height="100%"
+      frameborder="0"
+    ></iframe>
+
+    <!-- MIS CRIPTS -->
+
+    <script src="./js/main_menu.js"></script>
+  </body>
+</html>

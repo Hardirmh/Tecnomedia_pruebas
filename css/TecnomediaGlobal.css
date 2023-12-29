@@ -1,0 +1,367 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "gilroy";
+  src: url("/fonts/gilroy/gilroy-regular.woff2") format("woff2"),
+    url("/fonts/gilroy/gilroy-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gilroy-bold";
+  src: url("/fonts/gilroy/gilroy-bold.woff2") format("woff2"),
+    url("/fonts/gilroy/gilroy-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gilroy-semibold";
+  src: url("/fonts/gilroy/gilroy-semibold.woff2") format("woff2"),
+    url("/fonts/gilroy/gilroy-semibold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gilroy-medium";
+  src: url("/fonts/gilroy/gilroy-medium.woff2") format("woff2"),
+    url("/fonts/gilroy/gilroy-medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gilroy-regular-italic";
+  src: url("/fonts/gilroy/gilroy-regular-italic.woff2") format("woff2"),
+    url("/fonts/gilroy/gilroy-regular-italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* colors */
+  --primary: #00a59b;
+  --primary-dark: #0b2d4c;
+  --secondary: #6531c9;
+  --accent: #dcf763;
+  --light: #f4f4f4;
+  --dark: #141414;
+  --light-gray: #a8a8a8;
+
+  /* headings */
+  --heading-1: 3rem;
+  --heading-1-lh: 3.438rem;
+  --heading-2: 2rem;
+  --heading-2-lh: 2.625rem;
+  --heading-3: 1.5rem;
+  --heading-3-lh: 2rem;
+  --heading-4: 1.25rem;
+  --heading-4-lh: 1.75rem;
+  --heading-5: 1rem;
+  --heading-5-lh: 1.375rem;
+  --heading-6: 0.875rem;
+  --heading-6-lh: 1.25rem;
+
+  /* bodies */
+  --leading-body: 1.125rem;
+  --leading-body-lh: 1.875rem;
+  --body: 0.875rem;
+  --body-lh: 1.5rem;
+  --caption: 0.75rem;
+  --caption-lh: 1.25rem;
+  --eyebrow: 0.875rem;
+  --eyebrow-lh: 1.25rem;
+
+  /* buttons */
+  --btn-rounded-sm: 0.875rem;
+  --btn-rounded-sm-lh: 1.75rem;
+  --btn-rounded: 1rem;
+  --btn-rounded-lh: 1.75rem;
+  --btn-rounded-lg: 1rem;
+  --btn-rounded-lg-lh: 1.75rem;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "gilroy", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light);
+}
+
+/*  .primary-dark-to-secondary {
+  background: transparent
+    linear-gradient(349deg, #1a2c60 0%, var(--secondary) 100%) 0% 0% no-repeat
+    padding-box;
+}  */
+
+/* For purple sections paddings is bigger */
+/* .primary-dark-to-secondary section:first-child {
+  padding-top: 5rem;
+}
+
+.primary-dark-to-secondary section:last-child {
+  padding-bottom: 5rem;
+}
+
+section.primary-dark-to-secondary {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.primary-dark-to-secondary-banner {
+  background: transparent
+    linear-gradient(273deg, var(--primary-dark) 0%, var(--secondary) 100%) 0% 0%
+    no-repeat padding-box;
+} */
+
+.cta:has(div):has(ul) {
+  text-align: left;
+}
+
+.cta:has(div):has(ul) > div {
+  justify-content: flex-start;
+}
+
+.cta ul li {
+  display: flex;
+}
+
+.cta ul {
+  display: grid;
+  row-gap: 0.25rem;
+}
+
+.cta ul li > span {
+  display: block;
+  flex-shrink: 0;
+  background-color: var(--accent);
+  width: 0.875rem;
+  height: 0.125rem;
+  margin-top: 0.688rem;
+  margin-right: 0.5rem;
+}
+
+/* Styles for background image for hero slices (Services Overview page) */
+.hero-overview {
+  background-position: 70% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Styles for background image for 404 page */
+.notfound-page {
+  background-image: url("/images/404-bg.svg");
+  background-position: 70% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Case studies clipped image styles */
+.card-image-clipped {
+  -webkit-clip-path: circle(9rem at 14.5rem 0.5rem);
+  clip-path: circle(9rem at 14.5rem 0.5rem);
+}
+
+/* iframe scaling */
+.iframe {
+  width: 133%;
+  height: 133%;
+  -ms-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+/* Hubspot form */
+.hubspot form {
+  display: grid;
+  row-gap: 1rem;
+  color: var(--dark);
+}
+
+.hubspot .form-columns-2 {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+.hubspot .field {
+  display: grid;
+  row-gap: 0.75rem;
+}
+
+.hubspot .form-columns-2 .field {
+  width: 100% !important;
+  height: min-content;
+}
+
+.hubspot label {
+  font-size: var(--heading-5);
+  line-height: var(--heading-5-lh);
+  font-family: "gilroy-semibold";
+}
+
+.hubspot .hs-input {
+  padding: 0.75rem 1.25rem !important;
+  font-size: var(--body);
+  line-height: var(--body-lh);
+  border-radius: 0.5rem;
+  border: solid 1px #d6d6d6 !important;
+  width: 100%;
+}
+
+.hubspot .hs-fieldtype-textarea .hs-input {
+  resize: none;
+}
+
+.hubspot .hs-fieldtype-text .hs-input::placeholder {
+  opacity: 0.5;
+}
+
+.hubspot .hs-fieldtype-textarea .hs-input {
+  min-height: 9.25rem;
+}
+
+.hubspot .hs-button {
+  cursor: pointer;
+  border-radius: 1.75rem;
+  background-color: var(--primary);
+  border: solid 1px transparent;
+  color: #fff;
+  padding: 1rem 2.25rem;
+  font-size: var(--body);
+  transition-property: background-color, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.hubspot .hs-button:hover {
+  background-color: #fff;
+  border: solid 1px var(--primary);
+  color: var(--primary);
+}
+
+.hubspot .hs-error-msg {
+  font-family: "gilroy";
+  font-size: var(--eyebrow);
+  line-height: var(--eyebrow-lh);
+  color: rgba(255, 0, 0, 0.7);
+}
+
+.hubspot-modal .submitted-message {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.hubspot-modal .submitted-message:before {
+  content: url("/images/sent.svg");
+  width: 3rem;
+  height: auto;
+  order: -1;
+}
+
+.hubspot-modal .submitted-message:after {
+  content: "Message sent!";
+  font-family: "gilroy-semibold";
+  order: -1;
+}
+
+@media only screen and (min-width: 640px) {
+  .hubspot .form-columns-2 {
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    /* headings */
+    --heading-1: 6.25rem;
+    --heading-1-lh: 6.563rem;
+    --heading-2: 4rem;
+    --heading-2-lh: 4.5rem;
+    --heading-3: 3rem;
+    --heading-3-lh: 3.75rem;
+    --heading-4: 2rem;
+    --heading-4-lh: 2.625rem;
+    --heading-5: 1.5rem;
+    --heading-5-lh: 1.875rem;
+    --heading-6: 1rem;
+    --heading-6-lh: 1.375rem;
+
+    /* bodies */
+    --leading-body: 1.25rem;
+    --leading-body-lh: 2rem;
+    --body: 1rem;
+    --body-lh: 1.75rem;
+    --caption: 0.75rem;
+    --caption-lh: 1.25rem;
+    --eyebrow: 0.875rem;
+    --eyebrow-lh: 1.25rem;
+
+    /* buttons */
+    --btn-rounded-lg: 1.25rem;
+    --btn-rounded-lg-lh: 1.75rem;
+  }
+
+  .cta ul li > span {
+    margin-top: 0.813rem;
+  }
+
+  /* Styles for background image for hero slices (Services Overview page) */
+  .hero-overview {
+    background-position: right bottom;
+    background-size: 80%;
+  }
+
+  /* Styles for background image for 404 page */
+  .notfound-page {
+    background-position: right bottom;
+    background-size: 70%;
+  }
+
+  /* Hubspot form */
+  .hubspot .form-columns-2 {
+    flex-wrap: nowrap;
+    column-gap: 1.5rem;
+  }
+
+  .hubspot label {
+    font-size: var(--heading-6);
+    line-height: var(--heading-6-lh);
+  }
+
+  .hubspot-modal .submitted-message:before {
+    width: 5rem;
+  }
+}
+
+/* youtube video styles for landscape screen position */
+@media (orientation: landscape) {
+  .iframe-video {
+    margin: 0 auto;
+    max-width: 75%;
+    height: auto;
+  }
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="es" class="fadeIn">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width,  text/html, charset=UTF-8, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="no" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+
+    <link
+      type="image/x-icon"
+      href="https://tecnomedia.com.mx/img/logo/favicon.ico"
+      rel="icon"
+    />
+    <link href="./Contacto Tecnomedia_files/css" rel="stylesheet" />
+
+    <link href="./Contacto Tecnomedia_files/estilos.css" rel="stylesheet" />
+    <link href="./Contacto Tecnomedia_files/responsive.css" rel="stylesheet" />
+
+    <script src="./Contacto Tecnomedia_files/jquery-latest.js.descargar"></script>
+    <script
+      type="text/javascript"
+      src="./Contacto Tecnomedia_files/menu.js.descargar"
+    ></script>
+
+    <link href="./Contacto Tecnomedia_files/slick-theme.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="./Contacto Tecnomedia_files/jquery-1.11.0.min.js.descargar"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./Contacto Tecnomedia_files/jquery-migrate-1.2.1.min.js.descargar"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./Contacto Tecnomedia_files/slick.min.js.descargar"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".single-item").slick({
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 6000,
+          speed: 800,
+          arrows: true,
+          fade: true,
+        });
+        $(".responsive").slick({
+          autoplay: true,
+          autoplaySpeed: 5000,
+          infinite: true,
+          speed: 800,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 1025,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: true,
+              },
+            },
+            {
+              breakpoint: 965,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+              },
+            },
+            {
+              breakpoint: 670,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+              },
+            },
+            {
+              breakpoint: 485,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+              },
+            },
+          ],
+        });
+        $(".responsive2").slick({
+          autoplay: true,
+          autoplaySpeed: 5000,
+          infinite: true,
+          speed: 800,
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 1025,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                infinite: true,
+              },
+            },
+            {
+              breakpoint: 965,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: true,
+              },
+            },
+            {
+              breakpoint: 670,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+              },
+            },
+            {
+              breakpoint: 485,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+
+    <meta name="title" content="Contacto Tecnomedia" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="site" content="" />
+
+    <title>Contacto Tecnomedia</title>
+  </head>
+
+  <body>
+    <!--   <header>
+        <div class="contenedor">
+            <div class="col-xl-4 col-lg-3 col-mg-6 col-mc-12 logo">
+                <figure><a href="https://tecnomedia.com.mx/"><img src="./Contacto Tecnomedia_files/logo.jpg" alt=""></a>
+                </figure>
+            </div>
+            <div class="col-xl-8 col-lg-9 col-mg-6 col-mc-12 right">
+                <nav>
+                    <ul>
+                        <li><a href="https://tecnomedia.com.mx/">Home</a></li>
+                        <li><a href="https://tecnomedia.com.mx/Tecnomedia/Nosotros">Nosotros</a></li>
+                        <li class="submenu"><a href="https://tecnomedia.com.mx/Tecnomedia/Contacto#">Soluciones</a>
+                            <ul class="children">
+                                <li>
+                                    <a href="https://tecnomedia.com.mx/Tecnomedia/Soluciones/6/DEVOPS">DEVOPS</a>
+                                </li>
+                                <li>
+                                    <a href="https://tecnomedia.com.mx/Tecnomedia/Soluciones/11/API%20Management">API
+                                        Management</a>
+                                </li>
+                                <li>
+                                    <a href="https://tecnomedia.com.mx/Tecnomedia/Soluciones/3/Monitoreo">Monitoreo</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://tecnomedia.com.mx/Tecnomedia/Soluciones/5/Ciberseguridad">Ciberseguridad</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li><a href="https://tecnomedia.com.mx/Tecnomedia/Alianzas">Alianzas</a></li>
+                        <li><a href="https://tecnomedia.com.mx/Tecnomedia/Noticias">Noticias</a></li>
+                        <li><a href="https://tecnomedia.com.mx/Tecnomedia/Contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="contacto-header">
+                    <p>Contáctanos: 5254 6809</p>
+                    <a href="https://www.facebook.com/tecnomediamex/"><span class="icon-facebook"></span></a>
+                    <a href="https://twitter.com/tecnomediamex"><span class="icon-twitter"></span></a>
+                    <a href="https://www.linkedin.com/company/2391400/"><span class="icon-linkedin"></span></a>
+                    <div class="menu_bar">
+                        <a class="bt_menu"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ -->
+    <div class="contenedor contacto margin20-1">
+      <div class="col-xl-12 cabecera">
+        <figure>
+          <img
+            src="./Contacto Tecnomedia_files/cabecera-5.jpg"
+            alt="Formulario de contacto"
+          />
+        </figure>
+        <div>
+          <h3>Si deseas más información</h3>
+          <h2>FAVOR DE LLENAR EL FORMULARIO</h2>
+          <p>
+            con los datos correctos y nosotros nos pondremos en contacto contigo
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-mg-12 datos-contacto">
+        <div class="col-mg-4 col-mc-12">
+          <span class="icon-place"></span>
+          <h4 class="subtitulo">Dirección</h4>
+          <p>
+            Lafayette Núm. 123, Col. Nueva Anzures, Del. Miguel Hidalgo, C.P.
+            11590, Ciudad de México.
+          </p>
+        </div>
+        <div class="col-mg-4 col-mc-12">
+          <span class="icon-phone"></span>
+          <h4 class="subtitulo">Teléfonos</h4>
+          <p>+52 55 5254 68 09, 5545-8719</p>
+        </div>
+        <div class="col-mg-4 col-mc-12">
+          <span class="icon-letter"></span>
+          <h4 class="subtitulo">Correo electrónico</h4>
+          <p>
+            <a href="mailto:contacto@tecnomedia.com.mx"
+              >contacto@tecnomedia.com.mx
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="col-xl-9 col-mg-12">
+        <form
+          method="post"
+          name="Formulario"
+          action="https://tecnomedia.com.mx/Tecnomedia/enviar_cont"
+        >
+          <div class="col-xl-6 col-ch-12">
+            <input
+              name="compania"
+              value=""
+              type="text"
+              placeholder="Compañía:"
+            />
+          </div>
+          <div class="col-xl-6 col-ch-12">
+            <input type="text" name="nombre" value="" placeholder="Nombre:" />
+          </div>
+          <div class="col-xl-6 col-ch-12">
+            <input type="text" name="correo" value="" placeholder="Correo:" />
+          </div>
+          <div class="col-xl-6 col-ch-12">
+            <input
+              type="text"
+              name="telefono"
+              value=""
+              placeholder="Teléfono:"
+            />
+          </div>
+
+          <div class="col-xl-6 col-ch-12">
+            <input
+              type="text"
+              value=""
+              name="direccion"
+              placeholder="Dirección:"
+            />
+          </div>
+
+          <div class="col-xl-6 col-ch-12">
+            <input
+              type="text"
+              value=""
+              name="area"
+              placeholder="Área de Interés:"
+            />
+          </div>
+
+          <div class="col-xl-12">
+            <textarea placeholder="Comentarios:" name="mensaje"></textarea>
+          </div>
+          <div class="col-xl-12 enviar"><button>Enviar</button></div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="contenedor">
+        <div class="col-xl-4 col-mg-12">
+          <p>
+            <a href="https://tecnomedia.com.mx/Tecnomedia/AvisoPrivacidad"
+              >Aviso de privacidad</a
+            >
+            | México 20**
+          </p>
+        </div>
+        <div class="col-xl-8 col-mg-12 footer-contacto">
+          <p class="icon-phone">+52 55 5254 68 09, 5545-8719</p>
+          <p class="icon-letter">
+            <a href="mailto:contacto@tecnomedia.com.mx"
+              >contacto@tecnomedia.com.mx</a
+            >
+          </p>
+          <p class="icon-place">
+            Lafayette Núm. 123, Col. Nueva Anzures, Del. Miguel Hidalgo, C.P.
+            11590, Ciudad de México.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

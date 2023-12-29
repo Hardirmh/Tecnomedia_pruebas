@@ -1,0 +1,38 @@
+$(document).ready(main);
+
+	var contador = 1 ;
+	
+	function main(){
+		$('.menu_bar, #back, .cerrar').click(function(){
+			//$('.menu').toggle();
+			if(contador == 1){
+				$('nav, #back').animate({
+					right:'0',
+				});
+				contador = 0;
+			} else{
+				
+				contador = 1;
+				$('nav, #back').animate({
+					right:'-120%'
+				});
+			  }
+		});
+	};
+$(function() {
+    var pull = $('#pull');
+    menu = $('.menu_categorias,.su');
+    menuHeight = menu.height();
+
+    $(pull).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+    });
+});
+
+$(window).resize(function(){
+    var w = $(window).width();
+    if(w > 320 && menu.is(':hidden')) {
+        menu.removeAttr('style');
+    }
+});
